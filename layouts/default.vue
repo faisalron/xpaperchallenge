@@ -47,9 +47,31 @@ html {
   padding: 10px 30px;
   margin-left: 15px;
 }
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: auto;
+  content: "";
+  background-color: rgba(0, 0, 0, 0);
+}
+.with-shadow {
+  box-shadow: 0 6px 20px rgba(180, 180, 180, 0.5);
+}
+.with-shadow:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+.footer {
+  min-height: 5vh;
+  background-color: #f5f5f5;
+  flex: 1;
+}
+.content {
+  display: flex;
+  min-height: 55vh;
+  flex-direction: column;
 }
 </style>

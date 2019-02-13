@@ -8,11 +8,47 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'xpaperchallenge.org - 論文完全読破チャレンジ',
     meta: [
       { charset: 'utf-8' },
+      {
+        name: 'keywords',
+        content:
+          'nlpaper.challenge, cvpaper.challenge, nlp, natural language processing, paper, challenge, computer vision, xpaperchallenge'
+      },
+      {
+        name: 'description',
+        content: '論文完全読破チャレンジ。'
+      },
+      {
+        name: 'author',
+        content: 'xpaperchallenge.org'
+      },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        property: 'og:site_name',
+        content: 'xpaperchallenge.org'
+      },
+      {
+        property: 'og:title',
+        content: 'xpaperchallenge.org - 論文完全読破チャレンジ'
+      },
+      {
+        property: 'og:description',
+        content: '論文完全読破チャレンジ。'
+      },
+      {
+        property: 'og:image',
+        content: 'http://xpaperchallenge.org/images/logo.jpg'
+      },
+      {
+        property: 'og:url',
+        content: 'http://xpaperchallenge.org'
+      }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -52,7 +88,7 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }
