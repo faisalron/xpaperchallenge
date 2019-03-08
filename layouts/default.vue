@@ -71,7 +71,7 @@ html {
 }
 .content {
   display: flex;
-  min-height: 55vh;
+  min-height: 63vh;
   flex-direction: column;
 }
 </style>

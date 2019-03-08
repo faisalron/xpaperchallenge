@@ -43,7 +43,7 @@ module.exports = {
       },
       {
         property: 'og:image',
-        content: 'http://xpaperchallenge.org/images/logo.jpg'
+        content: 'http://xpaperchallenge.org/image/logo.jpg'
       },
       {
         property: 'og:url',

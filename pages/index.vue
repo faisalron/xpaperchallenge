@@ -1,32 +1,31 @@
 <template>
   <div>
-    <b-jumbotron header-level="4" bg-variant="dark" text-variant="white">
-      <div slot="header" class="text-center">
-        xpaper challenge
-      </div>
-      <div slot="lead" class="text-center">
-        論文完全読破！
-      </div>
+    <b-jumbotron bg-variant="dark" text-variant="white">
+      <h1 class="text-center">
+        xpaper.challenge
+      </h1>
     </b-jumbotron>
     <b-container class="content">
       <b-col cols="12" md="10" offset-md="1" lg="6" offset-lg="3">
         <b-card-group deck>
           <b-card
-            title="cvpaper.challenge"
             :img-src="require('~/static/image/cvpaperchallenge-logo.png')"
             class="with-shadow"
+            height="100"
             img-top
             img-alt="cvpaperchallenge"
           >
+            <h4 class="text-center">cvpaper.challenge</h4>
             <a href="http://xpaperchallenge.org/cv" class="btn stretched-link"></a>
           </b-card>
           <b-card
-            title="nlpaper.challenge"
-            :img-src="require('~/static/image/nlpaperchallenge-logo.jpg')"
+            :img-src="require('~/static/image/nlpaperchallenge-logo.png')"
             class="with-shadow"
+            height="100"
             img-top
             img-alt="nlpaperchallenge"
           >
+            <h4 class="text-center">nlpaper.challenge</h4>
             <a href="http://xpaperchallenge.org/nlp" class="btn stretched-link"></a>
           </b-card>
         </b-card-group>
