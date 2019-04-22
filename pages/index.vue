@@ -4,6 +4,9 @@
       <h1 class="text-center">
         xpaper.challenge
       </h1>
+      <div class="text-center">
+        〜CV/NLP分野の今を映し、トレンドを創り出す挑戦〜
+      </div>
     </b-jumbotron>
     <b-container class="content">
       <b-col cols="12" md="10" offset-md="1" lg="6" offset-lg="3">
