@@ -1,0 +1,55 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8
+    working_directory: ~/project
+    steps:
+      - checkout
+      - run:
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: install-npm-wee
+          command: npm install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: generate-app
+          command: npm run generate
+      - persist_to_workspace:
+          root: ./dist
+          paths:
+            - ./*
+  deploy:
+    machine:
+      enabled: true
+    working_directory: ~/project
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "c6:93:10:09:99:7f:e3:cf:9e:77:b6:7a:0c:13:b6:f5"
+      - attach_workspace:
+          at: ./dist
+      - run:
+          name: remove-previous-deployed
+          command: ssh ${SSH_USER}@${SSH_HOST} cd dist && ls | grep -v nlp | grep -v cv | xargs rm -rf
+      - run:
+          name: copy-app-to-remote
+          command: scp -r ./dist/* ${SSH_USER}@${SSH_HOST}:/home/xpaperchallenge/www
+workflows:
+  version: 2
+  build-and-deploy: # deploy only from master branch
+    jobs:
+      - build
+      - deploy:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build
