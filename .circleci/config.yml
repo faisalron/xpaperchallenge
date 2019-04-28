@@ -37,7 +37,7 @@ jobs:
           at: ./dist
       - run:
           name: remove-previous-deployed
-          command: ssh ${SSH_USER}@${SSH_HOST} cd /home/xpaperchallenge/www && ls | grep -v nlp | grep -v cv | xargs rm -rf
+          command: ssh ${SSH_USER}@${SSH_HOST} "cd /home/xpaperchallenge/www && ls | grep -v nlp | grep -v cv | xargs rm -rf"
       - run:
           name: copy-app-to-remote
           command: scp -r ./dist/* ${SSH_USER}@${SSH_HOST}:/home/xpaperchallenge/www
