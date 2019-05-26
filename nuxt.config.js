@@ -8,7 +8,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'xpaperchallenge.org - 論文完全読破チャレンジ',
+    title: 'xpaper.challenge',
     meta: [
       { charset: 'utf-8' },
       {
@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         property: 'og:title',
-        content: 'xpaperchallenge.org - 論文完全読破チャレンジ'
+        content: 'xpaper.challenge'
       },
       {
         property: 'og:description',
