@@ -4,7 +4,7 @@
       <b-row align-v="center">
         <b-col class="text-center">
           <h1 class="text-center">xpaper.challenge</h1>
-          <div class="text-center">〜CV/NLP分野の今を映し、トレンドを創り出す挑戦〜</div>
+          <div class="text-center">〜CV/NLP/Robot分野の今を映し、トレンドを創り出す挑戦〜</div>
           <b-row>
             <b-col cols="6" offset="3" sm="8" offset-sm="2" xl="4" offset-xl="4">
               <b-card-group class="menu" deck>
@@ -23,6 +23,14 @@
                   img-alt="nlpaperchallenge"
                 >
                   <a href="http://xpaperchallenge.org/nlp" class="stretched-link text-center menu-text">nlpaper.challenge</a>
+                </b-card>
+                <b-card
+                  :img-src="require('~/static/image/robotpaperchallenge-logo.png')"
+                  height="100"
+                  img-top
+                  img-alt="robotpaperchallenge"
+                >
+                  <a href="https://sites.google.com/view/robotpaperchallenge" class="stretched-link text-center menu-text">robotpaper.challenge</a>
                 </b-card>
               </b-card-group>
             </b-col>
